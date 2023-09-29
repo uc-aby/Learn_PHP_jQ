@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <button id="toggle">Toggle Text</button>
+  <div id="myText">This is some text.</div>
+
+  <script>
+    $(document).ready(function() {
+      $("#toggle").click(function() {
+        $("#myText").toggle();
+      });
+    });
+  </script>
+</body>
+</html>

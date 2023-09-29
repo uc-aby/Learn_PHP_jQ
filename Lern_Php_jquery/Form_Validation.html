@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email"><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    $(document).ready(function() {
+      $("form").submit(function(event) {
+        var name = $("#name").val();
+        var email = $("#email").val();
+
+        if (name == "") {
+          alert("Name is required!");
+          event.preventDefault();
+        }
+
+        if (email == "") {
+          alert("Email is required!");
+          event.preventDefault();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

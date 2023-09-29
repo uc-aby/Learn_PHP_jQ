@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  <button id="iterate">Iterate through List</button>
+
+  <script>
+    $(document).ready(function() {
+      $("#iterate").click(function() {
+        $("li").each(function(index) {
+          alert(index + ": " + $(this).text());
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <button id="fetchData">Fetch Data</button>
+  <div id="output"></div>
+
+  <script>
+    $(document).ready(function() {
+      // Send AJAX request
+      $("#fetchData").click(function() {
+        $.get("https://jsonplaceholder.typicode.com/posts/1", function(data) {
+          $("#output").text(data.title);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

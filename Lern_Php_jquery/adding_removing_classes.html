@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .highlighted {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <button id="add">Add Class</button>
+  <button id="remove">Remove Class</button>
+  <div id="myDiv">This is a div.</div>
+
+  <script>
+    $(document).ready(function() {
+      $("#add").click(function() {
+        $("#myDiv").addClass("highlighted");
+      });
+
+      $("#remove").click(function() {
+        $("#myDiv").removeClass("highlighted");
+      });
+    });
+  </script>
+</body>
+</html>

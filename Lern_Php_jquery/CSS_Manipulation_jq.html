@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .highlighted {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <button id="highlight">Highlight</button>
+
+  <script>
+    $(document).ready(function() {
+      // Change CSS properties
+      $("#highlight").click(function() {
+        $("body").toggleClass("highlighted");
+      });
+    });
+  </script>
+</body>
+</html>

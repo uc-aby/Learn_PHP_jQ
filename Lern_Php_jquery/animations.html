@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="animate">Animate</button>
+  <div class="box"></div>
+
+  <script>
+    $(document).ready(function() {
+      $("#animate").click(function() {
+        $(".box").animate({
+          width: "200px",
+          height: "200px",
+          marginLeft: "50px"
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+</html>
